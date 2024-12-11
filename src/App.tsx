@@ -1,11 +1,13 @@
 // Run this with Vite for optimal setup
 // Save this as App.jsx or main component in a React/Vite project
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './App.css'; // Create CSS file for styles
 
 function App() {
   useEffect(() => {
     const container = document.getElementById('bg-cubes');
+    if (!container) return; // Ensure container is not null
+
     const colors = ['#0f0', '#0c0', '#0b0'];
 
     for (let i = 0; i < 50; i++) {
